@@ -1,0 +1,54 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+    display: block;
+    color: @ink;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+    // Load System Fonts
+    font-family: @main_font, -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe
+      UI, Helvetica Neue, sans-serif;
+      letter-spacing: @letter_spacing;
+
+    // Make text render crisper
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Disable auto enlarge on safari
+    text-size-adjust: 100%;
+
+    // Rendering
+    text-rendering: optimizeLegibility;
+}
+body{
+    max-height: none;
+}
+
+
+// Change highlight selection style
+::selection {
+  background: @secondary_darker;
+  color: white;
+}
+::-moz-selection {
+  background: @secondary_darker;
+  color: white;
+}
+
+// Form elements display using defaults
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+// Images never exceed parent width
+img{
+  max-width: 100%;
+  max-height: 100%;
+}

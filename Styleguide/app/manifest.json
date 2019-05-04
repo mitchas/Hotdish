@@ -1,0 +1,31 @@
+{
+  "short_name": "styleguide",
+  "name": "Styleguide",
+  "description": "This is template for a base styleguide that includes common styles, with easy customization. It's also a visual styleguide for reference.",
+  "icons": [{
+    "src": "src/branding/meta/touch48.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  }, {
+    "src": "src/branding/meta/touch96.png",
+    "type": "image/png",
+    "sizes": "96x96"
+  }, {
+    "src": "src/branding/meta/touch114.png",
+    "type": "image/png",
+    "sizes": "114x114"
+  }, {
+    "src": "src/branding/meta/touch128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "src/branding/meta/touch192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/",
+  "background_color": "#23E9FF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#23E9FF"
+}

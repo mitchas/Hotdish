@@ -1,0 +1,31 @@
+{
+  "short_name": "Hotdish",
+  "name": "Hotdish",
+  "description": "Hotdish is building cool websites & apps with a focus on simplicity and control.",
+  "icons": [{
+    "src": "/src/images/branding/meta/touch48.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  }, {
+    "src": "/src/images/branding/meta/touch96.png",
+    "type": "image/png",
+    "sizes": "96x96"
+  }, {
+    "src": "/src/images/branding/meta/touch114.png",
+    "type": "image/png",
+    "sizes": "114x114"
+  }, {
+    "src": "/src/images/branding/meta/touch128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "/src/images/branding/meta/touch192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/",
+  "background_color": "#01598B",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#030508"
+}
