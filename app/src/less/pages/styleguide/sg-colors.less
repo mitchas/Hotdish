@@ -124,7 +124,7 @@
 }
 // Primary
 .cs_primary{
-    color: @white;
+    color: @primary_text;
     .cs_color:nth-child(1){
         background-color: @primary_lighter;
         &:before{ content: 'Lighter'; }
@@ -151,7 +151,7 @@
         &:after{ content: '@{primary_darker}'; }
     }
     .cs_color:nth-child(6){
-        color: @primary_text;
+        background-color: @primary !important;
         &:after{ content: '@{primary_text}'; }
     }
     .cs_color.dark-text{
@@ -160,6 +160,7 @@
 }
 // Secondary
 .cs_secondary{
+    color: @secondary_text;
     .cs_color:nth-child(1){
         background-color: @secondary_lighter;
         &:before{ content: 'Lighter'; }
@@ -186,17 +187,14 @@
         &:after{ content: '@{secondary_darker}'; }
     }
     .cs_color:nth-child(6){
-        background-color: @secondary_dark !important;
+        background-color: @secondary !important;
         &:after{ content: '@{secondary_text}'; }
-    }
-    .cs_color:after,
-    .cs_color:before{
-        color: @secondary_text;
     }
 }
 // Purple
 .cs_purple{
     color: @white;
+
     .cs_color:nth-child(1){
         background-color: @purple_lighter;
         &:before{ content: 'Lighter'; }

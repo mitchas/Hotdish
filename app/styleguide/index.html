@@ -45,18 +45,8 @@
     <link rel="apple-touch-startup-image" href="/src/branding/meta/splash.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!--build:css ./css/main.css-->
-    <!-- Styles -->
-    <link rel="stylesheet" href="/main.css" />
-    <!--endbuild-->
+    <link rel="stylesheet" href="/src/main.css" />
 
-    <!--build:js ./app.js -->
-    <!-- SCRIPTS -->
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <!-- Main App.js -->
-    <script src="js/app.js"></script>
-    <!-- endbuild -->
-    
     <!-- Font Awesome FREE CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -90,7 +80,7 @@
             // Intro //
            ////////////
         -->
-        <img src="./src/branding/logo_fullres.png" class="sg_intro_logo xs-mb-10 lg-mb-20 xs-mt-20 lg-mt-75 xs-m-auto"/>
+        <img src="/src/images/branding/logo_fullres.png" class="sg_intro_logo xs-mb-10 lg-mb-20 xs-mt-20 lg-mt-75 xs-m-auto"/>
 
         <!-- 
             //////////////////////////
@@ -110,11 +100,11 @@
             <div class="sg_color_spread xs-mt-20 lg-mt-30">
                 <!-- Primary -->
                 <div class="cs_group cs_primary">
-                    <div class="cs_color dark-text"></div>
-                    <div class="cs_color dark-text"></div>
-                    <div class="cs_color dark-text"></div>
-                    <div class="cs_color dark-text"></div>
-                    <div class="cs_color dark-text"></div>
+                    <div class="cs_color"></div>
+                    <div class="cs_color"></div>
+                    <div class="cs_color"></div>
+                    <div class="cs_color"></div>
+                    <div class="cs_color"></div>
                     <div class="cs_color"></div>
                 </div>
                 <!-- Secondary -->
@@ -252,31 +242,19 @@
                 <div class="sg_grid_item xs-mb-15 lg-mb-25">
                     <div class="sg_grid_example xs-p-10 lg-p-25">
                         <div class="sg_grid_example_float">
-                            <img src="./src/branding/logo_fullres.png" />
-                        </div>
-                    </div>
-                    <div class="sg_grid_info xs-p-10 lg-p-25">
-                        <div class="heading">Logo & Name</div>
-                        <span class="text-body">Full-resolution logo + name for use on web & print.</span>
-                    </div>
-                </div>
-                <!-- Graphic -->
-                <div class="sg_grid_item xs-mb-15 lg-mb-25">
-                    <div class="sg_grid_example xs-p-10 lg-p-25">
-                        <div class="sg_grid_example_float">
-                            <img src="./src/branding/logo_only_fullres.png" />
+                            <img src="/src/images/branding/logo_fullres.png" />
                         </div>
                     </div>
                     <div class="sg_grid_info xs-p-10 lg-p-25">
                         <div class="heading">Logo</div>
-                        <span class="text-body">Full-resolution logo (graphic only) for use on web & print.</span>
+                        <span class="text-body">Full-resolution logo for use on web & print.</span>
                     </div>
                 </div>
                 <!-- Avatar -->
                 <div class="sg_grid_item xs-mb-15 lg-mb-25">
                     <div class="sg_grid_example xs-p-10 lg-p-25">
                         <div class="sg_grid_example_float">
-                            <img src="./src/branding/avatar_fullres.png" />
+                            <img src="/src/images/branding/avatar_fullres.png" />
                         </div>
                     </div>
                     <div class="sg_grid_info xs-p-10 lg-p-25">
@@ -898,6 +876,11 @@
             Hotdi.sh 🥘
         </a>
     </div>
+
+    <!-- Javascript -->
+    <script src="/src/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/src/js/styleguide.js"></script>
+
     
 </body>
 </html>

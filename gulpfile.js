@@ -23,26 +23,36 @@ var folder = {
     build: 'public/'
 }
 
-
+// ======================================================
+// ======================================================
+// ======================================================
 // Development
 // Development
 // Development
 // Development
 // Development
+// ======================================================
+// ======================================================
+// ======================================================
+// ======================================================
 
 // Clean Dev Folder
 gulp.task('clean:dev', function () {
-    return del.sync(folder.dev);
+    return del.sync([
+        folder.dev + "i/",
+        folder.dev + "src/",
+        folder.dev + "404.html",
+        folder.dev + "index.html",
+        folder.dev + "manifest.json",
+    ]);
 })
+
 
 // Move static files
 var devFiles = [
-    folder.src + 'src/repos.json',
-    folder.src + 'src/repos2.json',
     folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
-    folder.src + 'styleguide.css',
     folder.src + 'manifest.json'
 ];
 gulp.task('staticdev', function () {
@@ -91,8 +101,7 @@ gulp.task('browsersync', function () {
 // Default serve sequence
 gulp.task('serve', function (callback) {
     runSequence(
-        'clean:dev',
-        ['lessdev', 'staticdev', 'twigdev', 'staticchange'],
+        'lessdev',
         'browsersync'
     )
 })
@@ -101,13 +110,18 @@ gulp.task('serve', function (callback) {
 gulp.task('default', ['serve']);
 
 
-
-
-// Build sequence
-// Build sequence
-// Build sequence
-// Build sequence
-// Build sequence
+// ======================================================
+// ======================================================
+// ======================================================
+// Build
+// Build
+// Build
+// Build
+// Build
+// ======================================================
+// ======================================================
+// ======================================================
+// ======================================================
 
 // Clean build folder
 gulp.task('clean:build', function () {
@@ -118,29 +132,12 @@ gulp.task('clean:build', function () {
 var staticFiles = [
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
-    folder.src + 'styleguide.css',
     folder.src + 'manifest.json'
 ];
 gulp.task('buildstatic', function () {
     gulp.src(staticFiles, { base: folder.src })
         .pipe(gulp.dest(folder.build));
 });
-
-// Copy Styleguide to Public Folder
-var styleguideFiles = [
-    './Styleguide/build/index.html',
-    './Styleguide/build/mainfest.json',
-    './Styleguide/build/app.js',
-    './Styleguide/build/css/**/*',
-    './Styleguide/build/src/**/*'
-];
-gulp.task('buildStyleguide', function () {
-    gulp.src(styleguideFiles, { base: "./Styleguide/build/"  })
-        // .pipe(rename({dirname: 'Styleguide'}))
-        .pipe(gulp.dest(folder.build + "Styleguide/"));
-});
-
-
 
 // Build LESS
 gulp.task('lessbuild', function () {
@@ -163,15 +160,6 @@ gulp.task('minifyjs', function () {
         .pipe(gulp.dest(folder.build + 'src/js/'))
 });
 
-// Compress Images
-gulp.task('images', function () {
-    var out = folder.build + 'src/images/';
-    return gulp.src(folder.src + 'src/images/**/*')
-        .pipe(newer(out))
-        .pipe(imagemin({ optimizationLevel: 5 }))
-        .pipe(gulp.dest(out));
-});
-
 // Compile Twig templates to HTML
 gulp.task('twigbuild', function () {
     return gulp.src([folder.src + '**/*.html'])
@@ -185,9 +173,7 @@ gulp.task('build', function (callback) {
     runSequence(
         'clean:build',
         ['buildstatic', 'lessbuild', 'minifyjs'],
-        // 'images',
         'twigbuild',
-        'buildStyleguide',
         callback
     )
 })

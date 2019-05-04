@@ -31,7 +31,12 @@ Builds the project into the /build/ folder - minifies JS, compiles TWIG and LESS
 ```bash
 gulp serve-build
 ```
-Test the build by serving from the /build/ folder.
+Test t
+
+```bash
+gulp styleguide
+```
+Copies styleguide build to public
 
 
 ## Deployment
