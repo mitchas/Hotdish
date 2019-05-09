@@ -118,12 +118,14 @@ a{
     font-weight: inherit;
     color: inherit;
     box-sizing: border-box;
-    border-bottom: 1px solid @primary_darker;
+    text-decoration: underline;
+    text-decoration-color: @primary;
     transition: @transition;
+    letter-spacing: -0.2px;
 
     &:hover{
         transition: @transition;
-        border-color: @ink;
+        text-decoration-color: @ink;
         color: @ink_darker;
     }
     &:focus{
@@ -132,7 +134,7 @@ a{
     }
     &:active{
         transition: @transition_fast;
-        opacity: 0.7;
+        opacity: 0.5;
     }
 }
 
