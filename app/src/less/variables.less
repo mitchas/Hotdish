@@ -10,11 +10,11 @@
 @accent_bg: lighten(@primary, 54%);
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@main_font: 'Public Sans';
-@monospace: monospace;
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap');
+@monospace: 'Space Mono';
 @sans: 'Public Sans';
 @serif: 'Merriweather';
+@main_font: @sans;
 
 // Font presets
 @bold_weight: 700;
@@ -27,9 +27,9 @@
 
 // Measurements
 @standard_width: 1200px;
-@border_radius: 4px;
-@border_radius_lg: 8px;
-@border_radius_xl: 16px;
+@border_radius: 2px;
+@border_radius_lg: 2px;
+@border_radius_xl: 2px;
 
 // Misc
 @transition: 0.15s;
@@ -82,7 +82,7 @@
 // md
 @md_fs: 24px;
 @md_lh: 30px;
-@md_ls: -0.5px;
+@md_ls: -0.75px;
     // mobile
     @md_fs_m: 21px;
     @md_lh_m: 28px;
@@ -90,31 +90,31 @@
 // sm
 @sm_fs: 20px;
 @sm_lh: 24px;
-@sm_ls: -0.5px;
+@sm_ls: -0.1px;
     // mobile
     @sm_fs_m: 16px;
     @sm_lh_m: 24px;
-    @sm_ls_m: -0.5px;
+    @sm_ls_m: -0.25px;
 // hd
 @hd_fs: 16px;
 @hd_lh: 24px;
-@hd_ls: -0.3px;
+@hd_ls: -0.1px;
     // mobile
     @hd_fs_m: 17px;
     @hd_lh_m: 24px;
-    @hd_ls_m: -0.4px;
+    @hd_ls_m: -0.2px;
 // sh
 @sh_fs: 12px;
 @sh_lh: 16px;
-@sh_ls: -0.4px;
+@sh_ls: -0.1px;
     // mobile
     @sh_fs_m: 13px;
     @sh_lh_m: 16px;
-    @sh_ls_m: -0.4px;
+    @sh_ls_m: -0.2px;
 // bt
 @bt_fs: 14px;
 @bt_lh: 20px;
-@bt_ls: -0.25px;
+@bt_ls: 0px;
     // mobile
     @bt_fs_m: 15px;
     @bt_lh_m: 20px;
@@ -122,8 +122,8 @@
 // cp
 @cp_fs: 12px;
 @cp_lh: 16px;
-@cp_ls: -0.25px;
+@cp_ls: 0px;
     // mobile
     @cp_fs_m: 13px;
     @cp_lh_m: 16px;
-    @cp_ls_m: -0.3px;
+    @cp_ls_m: -0.1px;
