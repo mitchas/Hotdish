@@ -10,3 +10,197 @@ body{
     }
 }
 
+
+// nav
+
+header.main{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: @white;
+    box-sizing: border-box;
+    padding: 16px 15px;
+    border: 1px solid @primary_dark;
+    width: 96vw;
+    margin: 0 auto;
+    position: fixed;
+    top: 40px;
+    left: 2vw;
+    box-shadow: 10px 10px 0px fade(@primary_darker, 20%);
+
+    // Move to bottom on mobile
+    @media (max-width: @screen_mobile) {
+        top: auto;
+        bottom: 4vw;
+        flex-wrap: wrap;
+        padding: 0 0 14px 0;
+        left: 4vw;
+        width: 92vw;
+
+        &:hover,
+        &:focus{
+            cursor: pointer;
+
+            nav.main{
+
+                div.link{
+                    height: 54px;
+                    transition: 0.15s ease;
+                    border-bottom: 1px solid @primary_dark;
+                    border-right: 1px solid @primary_dark;
+                }
+            }
+        }
+    }
+    // Move to bottom on mobile
+    @media (max-width: @screen_sm) {
+        &:hover,
+        &:focus{
+            nav.main{
+                div.link{
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+
+    // Logo
+    .header-branding{
+        display: flex;
+        text-decoration: none;
+
+        @media (max-width: @screen_mobile) {
+            order: 2;
+            flex-wrap: wrap;
+            padding-top: 14px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .mobile-only{
+            display: none;
+
+            @media (max-width: @screen_mobile) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 25%;
+            }
+
+            &.mobile-menu{
+                box-sizing: border-box;
+                padding-right: 25px;
+                text-align: right;
+
+                span{
+                    font-family: @monospace;
+                    font-family: 600;
+
+                    &:hover,
+                    &:active{
+                        cursor: pointer;
+                        color: @primary;
+                    }
+                    &:focus{
+                        text-decoration: underline;
+                        color: @primary;
+
+
+                    }
+                }
+            }
+        }
+
+        .header-branding-logo{
+
+            @media (max-width: @screen_mobile) {
+                margin: 0 auto;
+            }
+
+            img{
+                height: 34px;
+                width: auto;
+
+                @media (max-width: @screen_mobile) {
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    // Navs
+    nav.main{
+        display: flex;
+        width: 40%;
+
+        // Mobile
+        @media (max-width: @screen_mobile) {
+            order: 1;
+            width: 50%;
+            flex-wrap: wrap;
+            height: fit-content;
+            height: 100%;
+        }
+        // Full Mobile
+        @media (max-width: @screen_sm) {
+            width: 100%;
+        }
+
+        // Nav on right side
+        &.right{
+            justify-content: flex-end;
+
+            @media (max-width: @screen_mobile) {
+            }
+        }
+
+
+        div.link{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            // Mobile
+            @media (max-width: @screen_mobile) {
+                background-color: fade(@primary, 10%);
+                width: 100%;
+                height: 0px;
+                overflow: hidden;
+                border-collapse: collapse;
+                transition: 0.15s ease;
+            }
+
+
+            a{
+                font-size: 15px;
+                display: block;
+                text-decoration: none;
+                margin: 0 12px;
+                color: @primary_dark;
+                font-family: @sans;
+                font-weight: 400;
+
+                // Mobile
+                @media (max-width: @screen_mobile) {
+                    font-size: 18px;
+                    padding: 15px 0;
+                }
+
+                &:hover,
+                &:focus{
+                    cursor: pointer;
+                    color: @primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // Remove right border
+        &.right div.link{
+            border-right: none;
+        }
+
+    }
+}

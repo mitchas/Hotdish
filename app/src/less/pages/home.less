@@ -3,83 +3,6 @@
 // Custom elements
 // Etc
 
-header.home{
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    background-color: @white;
-    box-sizing: border-box;
-    padding: 16px 15px;
-    border: 1px solid @primary_dark;
-    width: 96vw;
-    margin: 0 auto;
-    position: fixed;
-    top: 40px;
-    left: 2vw;
-    box-shadow: 10px 10px 0px fade(@primary_darker, 20%);
-
-    @media (max-width: @screen_mobile) {
-        flex-wrap: wrap;
-    }
-
-    .header-branding{
-        display: flex;
-        text-decoration: none;
-
-        @media (max-width: @screen_mobile) {
-            order: 1;
-        }
-
-        .header-branding-logo{
-
-            img{
-                height: 34px;
-                width: auto;
-            }
-        }
-    }
-
-    // Navs
-    nav.main{
-        display: flex;
-        width: 40%;
-
-        &.right{
-            justify-content: flex-end;
-        }
-
-        // Change to stacked on mobile
-        @media (max-width: @screen_mobile) {
-            width: 100%;
-            order: 2;
-        }
-
-        div.link{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
-
-        a{
-            font-size: 15px;
-            display: block;
-            text-decoration: none;
-            margin: 0 12px;
-            color: @primary_dark;
-            font-family: @sans;
-            font-weight: 400;
-
-            &:hover,
-            &:focus{
-                cursor: pointer;
-                color: @primary;
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
 // Hero
 // Hero
 // Hero
@@ -110,7 +33,7 @@ header.home{
             max-width: 600px;
 
             h1{
-                color: @primary_dark;
+                color: @primary;
                 font-size: 52px;
                 line-height: 70px;
                 font-weight: 400;
