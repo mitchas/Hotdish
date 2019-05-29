@@ -3,16 +3,53 @@ body{
     // background-color: lighten(@primary, 51%);
     // background-image: linear-gradient(45deg, lighten(@secondary, 53%), lighten(@primary, 52%));
     // background-color: lighten(@secondary, 50%);
-    // background-color: lighten(@primary, 48%);
+    background-color: lighten(@primary, 53%);
+    font-family: @sans;
 
     @media (max-width: @screen_mobile) {
         padding-bottom: 65px;
     }
 }
 
+// Page Borders
+// Page Borders
+// Page Borders
+.pborder{
+    position: fixed;
+    top: 0;
+    background-color: @primary;
+    z-index: 1000;
 
-// nav
+    &.left{
+        left: 0;
+        width: 1px;
+        height: 100vh;
+    }
 
+    &.right{
+        right: 0;
+        width: 1px;
+        height: 100vh;
+    }
+
+    &.top{
+        left: 0;
+        height: 1px;
+        width: 100vw;
+    }
+
+    &.bottom{
+        left: 0;
+        height: 1px;
+        bottom: 0;
+        width: 100vw;
+        top: auto;
+    }
+}
+
+// NAV NAV NAV
+// NAV NAV NAV
+// NAV NAV NAV
 header.main{
     display: flex;
     justify-content: space-between;
@@ -20,13 +57,14 @@ header.main{
     background-color: @white;
     box-sizing: border-box;
     padding: 16px 15px;
-    border: 1px solid @primary_dark;
+    // border: 1px solid @primary;
     width: 96vw;
     margin: 0 auto;
     position: fixed;
     top: 40px;
-    left: 2vw;
-    box-shadow: 10px 10px 0px fade(@primary_darker, 20%);
+    left: 1.5vw;
+    box-shadow: 10px 10px 0px fade(@primary_darker, 18%);
+    z-index: 500;
 
     // Move to bottom on mobile
     @media (max-width: @screen_mobile) {
@@ -34,7 +72,7 @@ header.main{
         bottom: 4vw;
         flex-wrap: wrap;
         padding: 0 0 14px 0;
-        left: 4vw;
+        left: 3vw;
         width: 92vw;
 
         &:hover,
@@ -46,8 +84,8 @@ header.main{
                 div.link{
                     height: 54px;
                     transition: 0.15s ease;
-                    border-bottom: 1px solid @primary_dark;
-                    border-right: 1px solid @primary_dark;
+                    // border-bottom: 1px solid @ink_lighter;
+                    // border-right: 1px solid @ink_lighter;
                 }
             }
         }
@@ -94,7 +132,6 @@ header.main{
                 text-align: right;
 
                 span{
-                    font-family: @monospace;
                     font-family: 600;
 
                     &:hover,
@@ -165,22 +202,26 @@ header.main{
             // Mobile
             @media (max-width: @screen_mobile) {
                 background-color: fade(@primary, 10%);
+                background-color: @white;
+                text-decoration: underline;
                 width: 100%;
                 height: 0px;
                 overflow: hidden;
                 border-collapse: collapse;
                 transition: 0.15s ease;
+                text-align: center;
             }
 
 
             a{
-                font-size: 15px;
+                font-size: 16px;
                 display: block;
                 text-decoration: none;
                 margin: 0 12px;
-                color: @primary_dark;
+                color: @ink;
                 font-family: @sans;
-                font-weight: 400;
+                font-weight: 600;
+                letter-spacing: -0.1px;
 
                 // Mobile
                 @media (max-width: @screen_mobile) {
@@ -194,6 +235,20 @@ header.main{
                     color: @primary;
                     text-decoration: underline;
                 }
+
+                &.bold{
+                    @media (min-width: @screen_mobile) {
+                        background-color: @red_dark;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        padding: 0 8px;
+                        color: @white;
+                        border-radius: 2px;
+                        height: 100%;
+                    }
+                }
             }
         }
 
@@ -202,5 +257,37 @@ header.main{
             border-right: none;
         }
 
+    }
+}
+
+
+// FOOTER FOOTER FOOTER
+// FOOTER FOOTER FOOTER
+// FOOTER FOOTER FOOTER
+footer.main{
+    display: block;
+    background-color: @primary;
+    box-sizing: border-box;
+    padding: 55px 25px;
+    color: @white;
+    text-align: center;
+    font-size: 22px;
+    display: none;
+
+    b{
+        font-weight: 600;
+        margin: 0 auto;
+        max-width: 600px;
+        box-sizing: border-box;
+        padding: 15px 30px;
+        text-transform: lowercase;
+
+        a{
+            text-decoration: underline;
+
+            &:hover{
+                color: @secondary_lighter;
+            }
+        }
     }
 }

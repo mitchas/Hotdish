@@ -8,48 +8,222 @@
 // Hero
 .home-hero{
     display: flex;
-    height: 100vh;
+    height: fit-content;
+
+    @media (max-width: @screen_md) {
+        flex-wrap: wrap;
+    }
 
     .left,
     .right{
-        width: 50%;
-        flex-grow: 3;
-        height: 100%;
+        height: fit-content;
+
+        @media (max-width: @screen_md) {
+            width: 100%;
+        }
     }
 
     // Left side, text
     .left{
-        border-right: 1px solid @primary_dark;
-        background-color: fade(@primary, 8%);
-        background-color: fade(@secondary, 24%);
+
+        @media (max-width: @screen_md) {
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
         .hero-content{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             box-sizing: border-box;
-            padding: 20px 20px 20px 2vw;
             height: 100%;
             max-width: 600px;
+            position: relative;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 10;
+            background-color: @primary_light;
+
 
             h1{
-                color: @primary;
-                font-size: 52px;
-                line-height: 70px;
-                font-weight: 400;
+                color: @ink;
+                color: @white;
+                font-family: @sans;
+                font-size: 62px;
+                line-height: 74px;
+                font-weight: 500;
+                font-weight: 900;
+                letter-spacing: 0;
+
+                @media (max-width: 1100px) {
+                    font-size: 56px;
+                    line-height: 66px;
+                }
+                @media (max-width: 900px) {
+                    font-size: 48px;
+                    line-height: 54px;
+                }
             }
         }
     }
 
     // Right side, image
     .right{
-        background-size: cover;
-        background-position: center;
-        background-color: fade(@white, 20%);
-        background-blend-mode: lighten;
-        background-image: url('https://images.unsplash.com/photo-1541965228869-aea366196127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2501&q=80');
-        // background-image: url('');
-        background-image: url('https://images.unsplash.com/photo-1509111884843-33c32e087103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
-        background-position: center right;
+        flex-grow: 3;
+        height: 100%;
+        align-self: flex-end;
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-sizing: border-box;
+            height: 100%;
+            max-width: 600px;
+            position: relative;
+            z-index: 5;
+
+            img{
+                margin: 0;
+                width: 52px;
+                height: 70px;
+                opacity: 0.05;
+                transform: rotate(-4deg);
+            }
+
+            .description{
+                font-size: 26px;
+                line-height: 42px;
+                box-sizing: border-box;
+
+                @media (max-width: 1100px) {
+                    font-size: 24px;
+                    line-height: 36px;
+                }
+                @media (max-width: 900px) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+
+            // Arrow
+            .arrow{
+                position: relative;
+                display: none;
+
+                .square{
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    background-color: @red;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    &.point{
+                        transform: rotate(45deg);
+                        top: 80px;
+                    }
+                }
+            }
+
+            .circle{
+                position: relative;
+                z-index: 4;
+
+                // Stamp
+                width: 90%;
+                height: 280px;
+                display: inline-block;
+                padding: 10px;
+                background: @secondary_light;
+                position: relative;
+                // -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+                background: radial-gradient(
+                    transparent 0px, 
+                    transparent 10px, 
+                    @secondary_light 10px,
+                    @secondary_light
+                );
+                background-size: 30px 30px;
+                background-position: -15px -15px;
+
+
+                display: none;
+
+                // Stamp Background
+                &:after {
+                    content: '';
+                    // content: 'A Minneapolis-based design agency.';
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    // color: @white;
+                    padding: 25px;
+                    width: 100%;
+                    height: 100%;
+                    width: calc(~'100% - 20px');
+                    height: calc(~'100% - 20px');
+                    background-color: @secondary_light;
+                }
+
+                &:before{
+                    content: '';
+                    height: 150px;
+                    width: 150px;
+                    // border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                    border-top-right-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    position: absolute;
+                    top: -35px;
+                    right: -75px;
+                    z-index: 3;
+                    background-color: lighten(@red, 5%);
+                }
+            }
+
+        }
+    }
+}
+
+
+
+// Centered Hero
+.hero-centered{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 120px 25px 0 25px;
+    font-size: 28px;
+    color: @primary;
+    font-weight: 500;
+    line-height: 42px;
+
+    b{
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+    }
+
+    ul{
+        display: block;
+        margin: 75px auto;
+        max-width: 400px;
+
+        li{
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 15px;
+
+            a{
+                font-weight: 600;
+            }
+        }
     }
 }
