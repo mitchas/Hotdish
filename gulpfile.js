@@ -53,7 +53,10 @@ var devFiles = [
     folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
-    folder.src + 'manifest.json'
+    folder.src + 'manifest.json',
+    folder.src + 'contact/',
+    folder.src + 'work/',
+    folder.src + 'blog/'
 ];
 gulp.task('staticdev', function () {
     return gulp.src(devFiles, { base: folder.src })
