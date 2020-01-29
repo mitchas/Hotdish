@@ -1,6 +1,6 @@
 # Hotdi.sh Website
 
-Hotdish Main website.
+Hotdish Main website at Hotdi.sh. Hosted with Firebase.
 
 ## Getting Started
 
