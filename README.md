@@ -1,6 +1,6 @@
-# App Template
+# Hotdish
 
-Vue app template with local storage prefs.
+Website at hotdi.sh
 
 
 # Project Installation & Development
