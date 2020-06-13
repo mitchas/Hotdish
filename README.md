@@ -1,45 +1,65 @@
-# Hotdi.sh Website
+# App Template
 
-Hotdish Main website at Hotdi.sh. Hosted with Firebase.
+Vue app template with local storage prefs.
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on to a server.
+# Project Installation & Development
 
-### Prerequisites
-
-Node, npm, & gulp installed.
-
-Install with npm
-
+### Packages
 ```bash
 npm install
 ```
 
-## Building and testing
+## NPM Commands
 
+#### Serve on [localhost:8080](https://localhost:8080)
 ```bash
-gulp
+npm run serve
 ```
-Compiles HTML Twig tags into /dev/ folder & live reloads browser with BrowserSync from /dev/.
 
+#### Build for production
 ```bash
-gulp build
+npm run build
 ```
-Builds the project into the /build/ folder - minifies JS, compiles TWIG and LESS, and compresses images (which takes some time).
 
+#### Run your tests
 ```bash
-gulp serve-build
+npm run test
 ```
-Test t
-
+#### Lints and fixes files
 ```bash
-gulp styleguide
+npm run lint
 ```
-Copies styleguide build to public
+
+# Other things to set up
+
+### App version updates
+The current version number of the app is used in a few different places - on the about modal, on the changelog, and also to determine if an update has been pushed, in order to force the cache/PWA to reload. 
+
+Before deploying, change the current version number in two places -
+ * store.js
+ * service-worker.js
 
 
-## Deployment
+### Environment Variables
+Fill in your VUE_APP_BASE_URL and VUE_APP_BASE_PATH in `.env` and `.env.production`. The base URL should be the bare URL it'll be hosted at (ie https://example.com - no trailing slash) and the base path should be the path at the URL (ie /app if it'll be at example.com/app). For the root, leave it at /.
 
-Upload the /public/ folder contents manually.
+### Production Public Path
+If the app is going to be deployed in a sub directory (ie website.com/app/), edit the path in vue.config.js.
+
+
+# Everything else you should know
+
+## Third-party libraries
+I tried to use as few as possible. Apart from Vue and everything required by it, this project includes:
+ * [VueMoment](https://www.npmjs.com/package/vue-moment) (MomentJS) for time formatting
+ * [FontAwesome](http://fontawesome.com/) (Pro) for icons. You'll have to switch out icons if you don't have pro.
+ * [Vue Lodash](https://www.npmjs.com/package/vue-lodash) For working with the data.
+
+## Other Features
+ * Fully responsive/PWA support
+ * Soft keyboard detection to hide elements on mobile for more space when keyboard is visible.
+ * Lock scrolling when modal is visible
+ * LESS Styles with global light/dark themes
+ * Preferences stored in local storage.
 
