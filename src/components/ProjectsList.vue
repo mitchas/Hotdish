@@ -107,9 +107,36 @@ export default {
 			width: 100%;
 			background-color: var(--red);
 			box-sizing: border-box;
-			min-height: 80vh;
+			min-height: 700px;
 			padding: 0 5vw;
 			margin-bottom: 15vh;
+
+			background-size: 600px auto;
+			background-repeat: no-repeat;
+			background-position: 90% center;
+
+			@media (max-width: 1080px) {
+				background-size: 500px auto;
+			}
+			@media (max-width: 950px) {
+				background-size: 370px auto;
+				min-height: 500px;
+				margin-bottom: 80px;
+				padding: 0 4vw;
+			}
+			@media (max-width: 700px) {
+				background-size: 320px auto;
+				min-height: 400px;
+				margin-bottom: 80px;
+				background-position: 90% 90%;
+				padding: 0 0 0 0;
+			}
+			@media (max-width: 520px) {
+				background-size: 80% auto;
+				min-height: 400px;
+				margin-bottom: 60px;
+				background-position: center center;
+			}
 
 
 			.project-info{
@@ -119,21 +146,57 @@ export default {
 				flex-direction: column;
 				justify-content: center;
 
+				@media (max-width: 950px) {
+					width: 300px;
+				}
+				@media (max-width: 700px) {
+					width: 100%;
+					max-width: none;
+					justify-content: flex-start;
+					padding-top: 30px;
+					box-sizing: border-box;
+					padding: 25px 25px;
+				}
+
+
 				h2{
 					color: var(--black);
 					font-size: 22px;
 					font-weight: 300px;
+
+					@media (max-width: 950px) {
+						font-size: 18px;
+					}
+
 				}
 				h3{
 					color: var(--black);
 					font-size: 46px;
 					line-height: 50px;
 					padding: 2px 0;
+					font-family: var(--display);
+
+					@media (max-width: 950px) {
+						font-size: 34px;
+						line-height: 38px;
+						font-weight: 900;
+						padding: 0;
+					}
 				}
 				p{
 					color: var(--black);
 					font-size: 22px;
 					line-height: 32px;
+
+					@media (max-width: 950px) {
+						font-size: 18px;
+						line-height: 26px;
+						margin-bottom: 15px;
+					}
+					@media (max-width: 700px) {
+						max-width: 300px;
+						font-weight: 600;
+					}
 				}
 
 				// Buttons
@@ -152,18 +215,29 @@ export default {
 				// background-color: var(--blue);
 				background-color: #ABCBFF;
 				background-image: url('../assets/projects/ceev-screenshot.png');
-				background-size: 80vh auto;
-				background-repeat: no-repeat;
-				background-position: 90% center;
+
+				.project-info{
+					@media (max-width: 700px) {
+						background-color: rgba(171, 203, 255, 0.6);
+					}
+					@media (max-width: 520px) {
+						background-color: rgba(171, 203, 255, 0.8);
+					}
+				}
 			}
 
 			&.keyframes{
 				background-color: var(--black);
 				background-color: #D7F7F5;
 				background-image: url('../assets/projects/keyframes-screenshot.png');
-				background-size: 80vh auto;
-				background-repeat: no-repeat;
-				background-position: 90% center;
+				.project-info{
+					@media (max-width: 700px) {
+						background-color: rgba(222, 248, 247, 0.6);
+					}
+					@media (max-width: 520px) {
+						background-color: rgba(222, 248, 247, 0.8);
+					}
+				}
 			}
 			
 

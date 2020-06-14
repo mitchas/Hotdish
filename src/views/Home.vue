@@ -4,17 +4,7 @@
 // _________________________
 //
 //	Home page view
-//	Landing page with links to and examples of each app
-//
-//		Layout
-// 			Banners at top, hero text, example of each app below. Some apps are interactive, most are animated
-//
-//		Scripts
-//			Methods
-//				getLocalStorage() Called on mount, gets local storage, sets preferences in UI
-//				cycleColors(val)
-//					Cycles demo colors - updates value every x seconds. 
-// 					Called on mount, stops if slider adjusts. After timeout, calls itself with random val
+//		Short about, link to services, some projects
 //
 // -->
 
@@ -146,6 +136,12 @@ export default {
 			font-size: 100px;
 			line-height: 90px;
 			color: var(--red);
+
+			@media (max-width: @screenMD) {
+				font-size: 80px;
+				line-height: 70px;
+				color: blue;
+			}
 		}
 
 		h2{

@@ -383,7 +383,7 @@ export default {
 					// Accented hover label
 					&.accent{
 						span,i{
-							color: var(--blue);
+							color: var(--red);
 						}
 					}
 					// Lighter dark mode label
