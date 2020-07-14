@@ -7,11 +7,6 @@
 //		Routes
 // 			#BASIC 
 //					/									- Home page
-//					/whats-cookin/						- Projects page
-//					/menu/								- Services & Pricing page
-//					/changelog/							- Changelog
-// 			TESTING
-//					/commands/							- Test and see different UI elements and functions - not linked to anywhere
 //			#ERRORS  
 //					/404/
 //
@@ -24,13 +19,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 // Basic pages
 import Home from './views/Home.vue';
-import Projects from './views/Projects.vue';
-import Services from './views/Services.vue';
 
 // Everything else
 import Error404 from './views/other/error404.vue';
-import Changelog from './views/other/Changelog.vue';
-import Commands from './views/other/Commands.vue';
 
 Vue.use(Router);
 
@@ -50,38 +41,6 @@ const router = new Router({
 			path: '/',
 			name: 'Home',
 			component: Home,
-		},
-		///////////////
-		// Projects //
-		/////////////
-		{
-			path: '/whats-cookin/',
-			name: 'Projects',
-			component: Projects,
-		},
-		///////////////
-		// Services //
-		/////////////
-		{
-			path: '/menu/',
-			name: 'Services',
-			component: Services,
-		},
-		////////////////
-		// Changelog //
-		//////////////
-		{
-			path: '/changelog/',
-			name: 'Changelog',
-			component: Changelog,
-		},
-		///////////////
-		// Commands //
-		/////////////
-		{
-			path: '/commands/',
-			name: 'Commands',
-			component: Commands,
 		},
 
 	

@@ -154,7 +154,7 @@ export default {
 			font-size: 12px;
 			font-weight: 600;
 			padding: 0 10px;
-			color: var(--textLight);
+			color: var(--text);
 
 			&:hover{
 				cursor: pointer;

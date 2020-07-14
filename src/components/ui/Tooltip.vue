@@ -148,7 +148,7 @@ export default {
 			}
 			.code.example{
 				font-style: italic;
-				color: var(--textLight);
+				color: var(--text);
 				position: relative;
 			}
 

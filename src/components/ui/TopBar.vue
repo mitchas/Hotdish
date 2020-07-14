@@ -25,12 +25,14 @@
 	<div id="topBarWrapper">
 		<div id="topBar">
 			<!-- Branding - Logo -->
-			<div id="branding" @click="navigate('/')">
+			<div id="branding" @click="navigate('/')" v-if="$route.path != '/'">
 				<div id="logo">
 					<img src="@/assets/branding/pot-300.png" v-bind:class="{'invert': $store.getters.userPreferences.darkMode}"/>
 				</div>
-				<h1>Hotdish</h1>
 			</div>
+
+			<!-- Nav spacer -->
+			<div class="nav-flex-spacer"></div>
 
 			<!--  
 				Settings Nav
@@ -82,17 +84,6 @@
 						</button>
 					</div>
 				</div> -->
-
-				<!-- Get a website -->
-				<div class="settings-nav">
-					<div class="nav-dropdown" @click="navigate('/menu/')">
-						<button class="hover-label accent">
-							<!-- Chevron down -->
-							<i class="far fa-laptop-code"></i>
-							<span>Need a Website?</span>
-						</button>
-					</div>
-				</div>
 
 				<!-- Dark Mode -->
 				<div class="settings-nav">
@@ -225,36 +216,39 @@ export default {
 	#topBarWrapper{
 		// background-color: white;
 		position: fixed;
-		z-index: 60;
+		z-index: 150;
 		top: 0px;
 		width: 100%;
-		background-color: var(--transparent);
-		backdrop-filter: blur(3px);
+		// background-color: var(--primaryTransparent);
+		// backdrop-filter: blur(5px);
 	}
 
 	// Top nav bar
 	// Has logo and hover menu for account/dark mode
 	#topBar{
-		max-width: 1100px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		padding: 0 15px 0 15px;
+		padding: 25px;
+		width: 100%;
 		box-sizing: border-box;
-		height: 70px;
+		height: 80px;
+		// display: none;
 		// backdrop-filter: blur(3.3px);
 		// backdrop-filter:  grayscale(100%);
 
 		// Adjust padding and height on smaller screens
-		@media (min-width: @screenMD) {
-			padding: 0;
-		}
 		@media (max-width: @screenMD) {
 			height: 60px;
 		}
 		@media (max-width: @screenSM) {
 			height: 54px;
+		}
+
+		// Spacer - flex grow empty space
+		.nav-flex-spacer{
+			flex-grow: 3;
 		}
 
 		// Logo
@@ -270,14 +264,6 @@ export default {
 				transform: scale(0.975);
 			}
 
-			h1{
-				font-size: 22px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				margin: 0;
-				padding: 3px 0 0 10px;
-			}
 
 			#logo{
 				display: flex;
@@ -285,7 +271,7 @@ export default {
 				justify-content: center;
 
 				img{
-					height: 50px;
+					height: 42px;
 					width: auto;
 					@media (max-width: @screenMD) {
 						display: block;
@@ -409,7 +395,6 @@ export default {
 						&.dark-mode-on{
 							i{
 								left: -2px;
-								color: var(--white);
 							}
 
 							&:hover i{
@@ -440,7 +425,7 @@ export default {
 					top: 54px;
 					right: 0;
 					border-radius: var(--borderRadius);
-					background-color: var(--popup);
+					background-color: var(--red);
 					padding: 8px 10px 10px 10px;
 					box-shadow: var(--shadow);
 					border: var(--borderWidth) solid var(--border);

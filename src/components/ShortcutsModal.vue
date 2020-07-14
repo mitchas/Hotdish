@@ -240,7 +240,7 @@ export default {
 				font-size: 13px;
 				padding: 8px 8px 8px 15px;
 				line-height: 16px;
-				color: var(--textLight);
+				color: var(--text);
 				font-weight: 500;
 			}
 			.keys{

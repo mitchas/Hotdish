@@ -231,7 +231,7 @@ export default {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
-			background-color: var(--pageBackground);
+			background-color: var(--background);
 			margin: 0 auto;
 			width: 94%;
 			max-width: 500px;

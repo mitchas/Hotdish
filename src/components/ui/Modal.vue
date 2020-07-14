@@ -143,7 +143,7 @@ export default {
 		.modal{
 			display: flex;
 			flex-direction: column;
-			background-color: var(--pageBackground);
+			background-color: var(--background);
 			margin: 0 auto;
 			width: 90%;
 			max-width: 500px;
@@ -331,7 +331,7 @@ export default {
 					letter-spacing: 0.6px;
 					line-height: 24px;
 					font-weight: 500;
-					color: var(--textLight);
+					color: var(--text);
 					padding: 30px 20px;
 
 					@media (max-width: @screenSM) {

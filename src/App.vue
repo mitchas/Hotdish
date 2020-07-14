@@ -56,7 +56,7 @@
 				</main>
 
 				<!-- Footer -->
-				<Footer></Footer>
+				<!-- <Footer></Footer> -->
 
 				<!-- Toast Component -->
 				<Toast ref="toastComponent"></Toast>

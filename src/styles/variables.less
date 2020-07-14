@@ -28,13 +28,17 @@
 	////////////////////////////////
 	
 	// Fonts
-	--display: 'Space Grotesk', sans-serif;
+	--space: 'Space Grotesk', sans-serif;
 	--sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--serif: 'Frank Ruhl Libre', serif;
 	--mono: 'Source Code Pro', monospace;
 	--fontAwesome: 'Font Awesome 5 Pro';
 	--fontAwesomeBrands: 'Font Awesome 5 Brands';
 	--systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	
+	// Widths
+	--maxWidth: 800px;
+
 	// Transitions
 	--transition: 0.2s;
 	--transitionFast: 0.1s;
@@ -51,21 +55,24 @@
 	--outline: rgba(160,160,160,0.25);
 
 
-
 	////////////////////
 	//  Light Theme  //
 	////////////////////
 	// Layout colors
-	--background: #F8FBFE;
+	--background: #FFF3F3;
+	--primary: #FB263A;
+	--text: #FB263A;
+	// --background: #E1FBFA;
+	// --primary: #10727D;
+	// --text: #10727D;
+	
+
+	// Other colors
 	--layer: #ffffff;
-	--pageBackground: #ffffff;
-	--popup: #1a1b31;
+	--primaryTransparent: rgba(244, 241, 236, 0.5);
 
 	// Text and other elements
-	--text: #060619;
-	// --text: #16023C;
-	--textLight: rgba(22, 2, 60, 0.65);
-	--border: #16023C;
+	--border: rgba(0,0,0,0.25);
 	--inputBorder: #16023C;
 	--inputBackground: #ffffff;
 
@@ -74,13 +81,13 @@
 	--purple: #631CCC;
 	--green: #00E65A;
 	--yellow: #ffdb10;
-	--orange: #fa7c06;
-	--red: #fc143b;
+	--orange: #FF792D;
+	--red: #FB263A;
 	--grey: #EBEEF2;
 
 	// Links
-	--links: #fc143b; // Same as blue
-	--linksHover: #C1143B;
+	--links: #FB263A; // Same as blue
+	--linksHover: #FB263A;
 
 	// Other
 	--lightbox: rgba(210, 210, 232, 0.35);
@@ -99,24 +106,16 @@
 //  Dark Theme  //
 ////////////////////
 [data-theme="dark"] {
+	--borderWidth: 1px;
 
 	////////////////////
 	//  Dark  Theme  //
 	////////////////////
-
-	--borderWidth: 1px;
-
-	// Layout colors
-	// --background: #1D1E35;
-	--background: #000510;
-	// --layer: #050617;
-	--layer: #001020;
-	--pageBackground: #000510;
-	--popup: #060619;
+	--background: #1F0020;
+	--primary: #FFA9B0;
+	--text: #FFA9B0;
 
 	// Text and other elements
-	--text: #ffffff;
-	--textLight: #A9B0C7;
 	--border: #686E7E;
 	// --border: #5A5978;
 	--inputBorder: #9AA0B0;
