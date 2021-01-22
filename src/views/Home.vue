@@ -25,7 +25,7 @@
 			<!-- Logo -->
 			<div class="home-logo">
 				<img src="@/assets/branding/pot-300.png" v-if="!$store.getters.userPreferences.darkMode"/>
-				<img src="@/assets/branding/pot-300-dark.png" v-else/>
+				<img src="@/assets/branding/pot-300-dark.png" class="dark" v-else/>
 			</div>
 
 			<!-- Content -->
@@ -37,7 +37,7 @@
 					</span>
 				</div>
 			</div>
-			<h1>Practical websites & apps, without all the nonsense you find everywhere else.</h1>
+			<h1>Practical websites & apps, without all the clutter you find everywhere else.</h1>
 			<p class="big">That means no ads, no popups telling you to stop blocking ads, no invasive tracking, no collecting & selling your data, no social media plugins, no subscriptions, no emails you never asked for, etc.</p>
 
 			<!-- Spacer -->
@@ -175,14 +175,14 @@
 			<!-- Client work description -->
 			<h2>Get a one-of-a-kind website designed and deployed in days (not weeks)</h2>
 			<p class="mtop-md">
-				Affordable, fixed price websites with turnaround in as little as 4 days if you know what you need (if you don't, that's okay too). 
+				Affordable, fixed price websites with turnaround in as little as 4 days if you know what you need (if you don't, that's cool too). 
 			</p>
 
 			<p class="mtop-md">
 				<b>If you</b>
 				<ul>
 					<li>Need a simple, well-designed website really, really fast;</li>
-					<li>Don't want to try to figure it out how to do it yourself;</li>
+					<li>Don't want to try to figure out how to do it yourself;</li>
 					<li>Have the content - text, images, links - that you need on the site;</li>
 					<li>Have a very general idea (or don't care) about the overall style or design;</li>
 				</ul>
@@ -338,6 +338,11 @@ export default {
 					display: block;
 					height: 80px;
 					width: auto;
+					filter: grayscale(100%) brightness(0%);
+
+					&.dark{
+						filter: grayscale(100%) brightness(200%);
+					}
 				}
 
 				@media (max-width: @screenLG) {
@@ -511,7 +516,7 @@ export default {
 					position: absolute;
 					left: -50vw;
 					z-index: 50;
-					background-color: var(--primary);
+					background-color: var(--text);
 				}
 
 				.full-page-spacer-body{
@@ -523,7 +528,7 @@ export default {
 					width: 100%;
 					top: 0;
 					z-index: 100;
-					color: var(--background);
+					color: var(--text);
 					text-align: center;
 					display: none;
 
@@ -541,7 +546,7 @@ export default {
 							display: flex;
 							flex-direction: column;
 							justify-content: center;
-							color: var(--background);
+							color: var(--black);
 							font-size: 22px;
 						}
 					}
