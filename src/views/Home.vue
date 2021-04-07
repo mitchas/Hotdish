@@ -74,10 +74,46 @@
 			<div class="project-block ptop-xl">
 				<!--
 					======================== 
+					things .mn
+					======================== 
+				-->
+				<h2>things.mn</h2>
+				<div class="project-content">
+					<div class="third">
+						<p class="small">
+							A website to discover *things* in Minnesota. If you live in Minnesota (or are just visiting) check it out to find stuff to do/see/eat/buy.
+						</p>
+					</div>
+					<div class="third">
+						<p class="small">
+							Data is gathered from various sources and organized all in one place so users can search anything, anywhere (in Minnesota) easily. 
+						</p>
+					</div>
+					<div class="third">
+						<p class="small">
+							It's built on Vue with Firebase for the backend. Private and ad-free.
+						</p>
+					</div>
+				</div>
+				<!-- Things.mn footer -->
+				<div class="project-footer">
+					<div class="project-footer-block">
+						<button class="button small" @click="tab('https://things.mn')">
+							<i class="far fa-link"></i>
+							<span>Go to things.mn</span>
+						</button>
+					</div>
+					<!-- Spacer -->
+					<div class="project-footer-spacer"></div>
+				</div>
+				
+				
+				<!--
+					======================== 
 					Ceev .io
 					======================== 
 				-->
-				<h2>Ceev.io</h2>
+				<h2 class="mtop-xl">Ceev.io</h2>
 				<div class="project-content">
 					<div class="third">
 						<p class="small">
@@ -291,9 +327,11 @@ export default {
 
 	// Page properties
 	.home-page{
+		max-width: 100vw;
 		box-sizing: border-box;
 		padding: 0 25px;
 		overflow: auto;
+		overflow-x: hidden;
 		height: 100%;
 		color: var(--text);
 
@@ -490,7 +528,7 @@ export default {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				width: 100%;
+				width: 100vw;
 				height: 10px;
 				position: relative;
 
