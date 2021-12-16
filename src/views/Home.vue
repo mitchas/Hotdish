@@ -54,9 +54,9 @@
 			<!-- About Split -->
 			<div class="about-split">
 				<div class="left">
-					<h3>Side Projects</h3>
+					<h3>Projects</h3>
 					<p class="small">
-						I build small, single-purpose websites to make everyday tasks a little easier. Most projects are original ideas, others are existing tools & ideas I thought I could make a little nicer.
+						I build smaller, single-purpose websites to make everyday tasks a little easier. Most projects are original ideas, others are existing tools & ideas I thought I could make a little nicer.
 					</p>
 					<!-- <a href="#projects">See the projects</a> -->
 				</div>
@@ -81,7 +81,7 @@
 				<div class="project-content">
 					<div class="third">
 						<p class="small">
-							A website to discover *things* in Minnesota. If you live in Minnesota (or are just visiting) check it out to find stuff to do/see/eat/buy.
+							A website to discover *things* in Minnesota. If you live in Minnesota (or are just visiting) check it out to find stuff to do/see/eat/buy/read about.
 						</p>
 					</div>
 					<div class="third">
@@ -233,11 +233,11 @@
 				<b>Need a little more than that?</b>
 				<ul>
 					<li>More time working together on content, design, and functionality choices  (+ ~$200)</li>
-					<li>Advanced CMS for editing or blogging  (+ ~$200)</li>
-					<li>An interactive single-page application or tool, similar to my side projects (+ ~$400)</li>
-					<li>A fomal visual identity - colors, fonts, branding, etc  (~$120)</li>
-					<li>Browser extension to extend functionality of website (+ ~$400)</li>
-					<li>Full-stack web application with user authentication, data reading/writing, etc ($1000+)</li>
+					<li>Advanced CMS for editing or blogging  (+ ~$300)</li>
+					<li>An interactive single-page application or tool, similar to my side projects (+ ~$700)</li>
+					<li>A formal visual identity - colors, fonts, branding, etc  (~$120)</li>
+					<li>Browser extension to extend functionality of website (+ ~$500)</li>
+					<li>Full-stack web application with user authentication, data reading/writing, etc ($1200+)</li>
 				</ul>
 			</p>
 
