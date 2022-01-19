@@ -1,112 +1,111 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<title>Hotdi.sh</title>
-		<meta name="description" content="Hotdi.sh" />
-		<meta name="keywords" content="Hotdi.sh" />
-		<meta name="theme-color" content="#1F0020">
-		<!-- Icons -->
-        <link rel="shortcut icon" href="<%= VUE_APP_BASE_URL %>/img/icons/favicon-32x32.png">
+<html lang="">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Hotdi.sh</title>
+	<meta name="description" content="Making the internet a little nicer. Hotdi.sh is a Minnesota-based studio building cool things for the internet." />
+	<meta name="keywords" content="Hotdi.sh" />
+	<meta name="theme-color" content="#1F0020">
+	<!-- Icons -->
+	<link rel="shortcut icon" href="/img/icons/favicon-32x32.png">
+
+	<!-- Space Grotesk Font -->
+	<link rel="stylesheet" href="/img/SpaceGrotesk/stylesheet.css">
 
 
-		<!-- CDN Imports -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+	<!-- CDN Imports -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
 
-		<!-- Social Media Meta -->
-		<!-- Facebook -->
-		<meta property="og:title" content="Hotdi.sh">
-		<meta property="og:description" content="Hotdi.sh">
-		<meta property="og:image" content="<%= VUE_APP_BASE_URL %>/img/meta/facebook.png">
-		<meta property="og:url" content="<%= VUE_APP_BASE_URL %>">
+	<!-- Social Media Meta -->
+	<!-- Facebook -->
+	<meta property="og:title" content="Hotdi.sh">
+	<meta property="og:description" content="Making the internet a little nicer">
+	<meta property="og:image" content="<%= BASE_URL %>/img/meta/facebook.png">
+	<meta property="og:url" content="<%= BASE_URL %>">
 
-		<!-- Twitter -->
-		<meta name="twitter:title" content="Hotdi.sh">
-		<meta name="twitter:description" content="Hotdi.sh">
-		<meta name="twitter:image" content="<%= VUE_APP_BASE_URL %>/img/meta/twitter.jpg">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:image:alt" content="<%= VUE_APP_BASE_URL %>">
-		
-		<!-- Syles for no-js warning below -->
-		<style type="text/css">
+	<!-- Twitter -->
+	<meta name="twitter:title" content="Hotdi.sh">
+	<meta name="twitter:description" content="Making the internet a little nicer">
+	<meta name="twitter:image" content="<%= BASE_URL %>/img/meta/twitter.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image:alt" content="<%= BASE_URL %>">
+
+	<!-- Syles for no-js warning below -->
+	<style type="text/css">
 			
-			.no-js{
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100%;
-				color: white;
-				text-align: right;
-				box-sizing: border-box;
-				padding-top: 35px;
-			}
-			
-			.no-js p{
-				margin: 0 auto;
-				width: 90%;
-				max-width: 450px;
-				font-size: 28px;
-				text-align: justify;
-			}
-			.no-js p b{
-				display: block;
-				margin-bottom: 10px;
-				font-size: 38px;
-				text-decoration: underline;
-			}
-			.no-js p i{
-				font-size: 70px;
-				margin-bottom: 50px;
-				margin-top: 25px;
-				float: right;
-				color: rgb(0, 32, 51);
-			}
-		</style>
-
-		<!-- Matomo -->
-		<script type="text/javascript">
-			var _paq = window._paq = window._paq || [];
-			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-			_paq.push(["disableCookies"]);
-			_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-			_paq.push(["setCookieDomain", "*.hotdi.sh"]);
-			_paq.push(["setDomains", ["*.hotdi.sh","*.dev.hotdi.sh"]]);
-			_paq.push(['enableLinkTracking']);
-			(function() {
-				var u="https://hello.hotdi.sh/";
-				_paq.push(['setTrackerUrl', u+'matomo.php']);
-				_paq.push(['setSiteId', '2']);
-				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-			})();
-		</script>
-		<!-- End Matomo Code -->
+		.no-js{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100%;
+			color: white;
+			text-align: right;
+			box-sizing: border-box;
+			padding-top: 35px;
+		}
 		
-  
+		.no-js p{
+			margin: 0 auto;
+			width: 90%;
+			max-width: 450px;
+			font-size: 28px;
+			text-align: justify;
+		}
+		.no-js p b{
+			display: block;
+			margin-bottom: 10px;
+			font-size: 38px;
+			text-decoration: underline;
+		}
+		.no-js p i{
+			font-size: 70px;
+			margin-bottom: 50px;
+			margin-top: 25px;
+			float: right;
+			color: rgb(0, 32, 51);
+		}
+	</style>
 
-    </head>
-    <body>
+	<!-- Matomo -->
+	<script type="text/javascript">
+		var _paq = window._paq = window._paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(["disableCookies"]);
+		_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+		_paq.push(["setCookieDomain", "*.hotdi.sh"]);
+		_paq.push(["setDomains", ["*.hotdi.sh","*.dev.hotdi.sh"]]);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="https://hello.hotdi.sh/";
+			_paq.push(['setTrackerUrl', u+'matomo.php']);
+			_paq.push(['setSiteId', '2']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+	<!-- End Matomo Code -->
+	
 
-        <noscript>
-			<div class="no-js">
-				<p>
-					<b>Oops,</b>
-					This site doesn't work without Javascript, and it looks like your browser has it disabled.
-					<i class="far fa-sad-tear"></i>
-				</p>
-			</div>
-        </noscript>
 
-        
-        <div id="app"></div>
-        <!-- built files will be auto injected -->
-  </body>
+  </head>
+  <body>
+	<noscript>
+		<div class="no-js">
+			<p>
+				<b>Oops,</b>
+				This site doesn't work without Javascript, and it looks like your browser has it disabled.
+				<i class="far fa-sad-tear"></i>
+			</p>
+		</div>
+	</noscript>
+
+	
+	<div id="app"></div>
+	<!-- built files will be auto injected -->  </body>
 </html>
