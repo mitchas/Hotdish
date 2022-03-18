@@ -2,10 +2,11 @@
 
 
 
-<div class="padded mtop-lg margin-auto max-width">
+<div class="padded margin-auto max-width">
+	<div class="ptop-xl"></div>
 	<img src="@/assets/logo.png" title="Logo" alt="Logo" id="topLogo"/>
 	<h1 class="align-left">
-		Making the internet a little nicer. {{darkMode}}
+		Making the internet a little nicer.
 		<small>Practical websites & apps, without all the clutter you find everywhere else.</small>
 	</h1>
 
@@ -25,9 +26,6 @@
 	<p>
 		My name is Mitch. I'm a Minneapolis-based website designer/developer building websites that do what you need them to do, and nothing else.
 	</p>
-	<p>
-		Every project is built from scratch without using any templates or themes - full control over the design and functionality means a lot more is possible.
-	</p>
 
 	<div class="align-center">
 		<i class="far fa-code text-largest margin-auto mtop-md mbottom-md"></i>
@@ -39,7 +37,7 @@
 	<h2 class="mtop-md">
 		<!-- <img src="@/assets/things-light.png" title="Things.mn logo" alt="Things.mn Logo" class="project-logo" v-if="!darkMode"/>
 		<img src="@/assets/things-dark.png" title="Things.mn logo" alt="Things.mn Logo" class="project-logo" v-else/> -->
-		Things.mn
+		Things.mn - Coming soon
 		<small>A Minnesota-focused app to find... things... - but also events, news, jobs, maps, and tons other information.</small>
 	</h2>
 
@@ -124,9 +122,9 @@
 
 
 	<h1 class="mtop-lg">
-		Get a one-of-a-kind website designed and deployed in days (not months)
+		Get a one-of-a-kind website designed and deployed in days, not months
 		<small>
-			Affordable, fixed price websites with turnaround in as little as 4 days if you know what you need (if you don't, that's cool too).
+			Affordable, fixed price websites with turnaround in as little as 5 days if you know what you need (if you don't, that's cool too).
 		</small>
 	</h1>
 
@@ -138,10 +136,10 @@
 		<li>Need a simple, well-designed website really, really fast;</li>
 		<li>Don't want to try to figure out how to do it yourself;</li>
 		<li>Have the content - text, images, links - that you need on the site;</li>
-		<li>Have a very general idea (or don't care) about the overall style or design;</li>
+		<li>Have a general idea about the overall style or design, or are fine leaving it up to me;</li>
 	</ul>
 	<p class="no-padding">
-		Then in about 4 days and for $499 (ish*), you can have a well-designed, easy to edit, maintenance-free website.
+		Then in about 5 days and for $900 (ish*), you can have a well-designed maintenance-free website.
 	</p>
 	<p class="small text-fade no-padding">
 		* On top of the flat fee, you'll pay the price to register your chosen domain ($5-$60/year, usually) and hosting (~$40/year).
@@ -152,8 +150,8 @@
 	</p>
 
 	<ul class="text-large margin-none">
-		<li>Time working together on content, design, and functionality choices (+ ~$300)</li>
-		<li>Advanced CMS for editing or blogging (+ ~$400)</li>
+		<li>Time working together on content, design, and functionality choices (+ ~$400)</li>
+		<li>Advanced CMS for simple editing or blogging (+ ~$500)</li>
 		<li>An interactive single-page application or tool (+ ~$800)</li>
 		<li>A formal visual identity - colors, fonts, branding, etc (~$240)</li>
 		<li>Browser extension to extend functionality of website (+ ~$800)</li>
@@ -250,10 +248,10 @@ export default {
 	opacity: 0.8;
 
 	.fa-sun{
-		color: var(--black);
+		color: var(--white);
 	}
 	.fa-moon{
-		color: var(--white);
+		color: var(--black);
 	}
 
 	&:hover{
