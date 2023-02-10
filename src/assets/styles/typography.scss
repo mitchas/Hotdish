@@ -1,0 +1,100 @@
+@import 'screen-breaks.scss';
+
+//! Typography
+// Header, Paragraph, and other text styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  position: relative;
+}
+h1 {
+	font-size: 3.4rem;
+	line-height: 3.8rem;
+	font-weight: 700;
+	@media(max-width: $screenMobile) {
+		font-size: 2.2rem;
+		line-height: 2.75rem;
+	}
+}
+h2 {
+	font-size: 2.8rem;
+	line-height: 3.2rem;
+	font-weight: 700;
+	@media(max-width: $screenMobile) {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+	}
+}
+h3 {
+	font-size: 2.214rem;
+	line-height: 2.75rem;
+	font-weight: 700;
+	@media(max-width: $screenMobile) {
+		font-size: 1.4rem;
+		line-height: 1.5rem;
+	}
+}
+h4 {
+	font-size: 1.407rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	@media(max-width: $screenMobile) {
+		font-size: 1.2rem;
+		line-height: 1.3rem;
+	}
+}
+h5 {
+	font-size: 1.01333333rem;
+	font-weight: 700;
+}
+h6 {
+	font-size: 0.89rem;
+	font-weight: 700;
+	color: var(--text)
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small{
+	font-size: 0.55em;
+	display: block;
+	font-weight: 500;
+}
+
+
+//   Text Elements 
+// Paragraphs
+p,
+.paragraph{
+	font-size: 1rem;
+	line-height: 1.75rem;
+	max-width: 700px;
+	padding: 12px 0;
+	color: inherit;
+	font-weight: 400;
+
+	@media(max-width: $screenMobile) {
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
+
+	// Bold
+	b{
+		font-weight: 700;
+	}
+}
+
+
+a{
+	text-decoration: none;
+}

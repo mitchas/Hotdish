@@ -1,44 +1,35 @@
 {
   "name": "hotdish",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Static Hotdi.sh website",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "watch:sass": "sass --no-source-map --watch src/assets/styles:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map src/assets/styles:dist/css",
+    "build:eleventy": "eleventy",
+    "clean": "del-cli dist",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r",
+    "serve": "npm-run-all clean build:sass --parallel watch:*",
+    "build": "npm-run-all clean build:sass build:eleventy"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitchas/hotdish"
   },
+  "author": "Mitch Samuels",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "sass": "^1.49.0",
-    "sass-loader": "^10.1.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "sass": "^1.30.0"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "last 2 versions"
+  ],
+  "dependencies": {
+  }
 }

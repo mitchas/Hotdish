@@ -1,24 +1,27 @@
-# hotdish
+# Hotdi.sh Website
+## Getting Started
 
-## Project setup
-```
+### Prerequisites
+
+Node, npm.
+
+Install with npm
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Building and testing
+
+```bash
 npm run serve
 ```
+Uses [Parcel](https://parceljs.org) to compile and serve at localhost:1234
 
-### Compiles and minifies for production
-```
+```bash
 npm run build
 ```
+Uses [11ty](https://11ty.dev) to compile to the `/dist/` folder using [Nunchucks](https://mozilla.github.io/nunjucks/) templating.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Deployment
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
