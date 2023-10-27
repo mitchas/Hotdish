@@ -1,13 +1,4 @@
 @import 'screen-breaks.scss';:root {
-    // Global variables
-    // Fonts
-    --sans: 'Rubik', var(--systemFont);
-    --bubble: 'DynaPuff', var(--systemFont);
-    --serif: 'Fraunces', 'Crimson Pro', 'Lucida Bright', 'Garamond', 'Times New Roman', serif;
-    --fontAwesome: 'Font Awesome 6 Pro';
-    --fontAwesomeBrands: 'Font Awesome 6 Brands';
-    --systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
     // Transitions
     --transition: 0.2s;
 
@@ -16,13 +7,14 @@
 	--borderWidth: 6px;
 
 	// Colors
-	--background: #61F2C2;
+	--background: #FFFFFF;
 	--accent: #EE2677;
 	--bright: #00E8FC;
 	--purple: #C1BFF8;
 	--yellow: #ffe734;
 	--white: #FFFFFF;
-    --text: #0d0e45;
+	--blue: #0046DC;
+    --text: #000000;
 }
 
 

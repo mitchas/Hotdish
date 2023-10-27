@@ -1,550 +1,90 @@
 
 @import '../screen-breaks.scss';
 
-.home-big-text{
-	font-family: var(--sans);
-	font-weight: 700;
-	display: block;
-	max-width: 80%;
-	width: fit-content;
-	margin: 12vh auto 8vh auto;
 
-	@media(max-width: $screenTablet) {
-		max-width: unset;
-		margin: 12vh auto 6vh auto;
-	}
-	@media(max-width: $screenMobile) {
-		margin: 12vh auto 6vh auto;
-	}
+#logo{
+	img{
+		width: 100px;
+		height: auto;
+		display: inline-block;
 
-
-	sup {
-		line-height: 0;
-		height: 0;
-		color: var(--accent);
-		padding-left: 2px;
-		font-weight: 600;
-
-		&:hover{
-			cursor: pointer;
-			text-decoration: underline;
+		@media(max-width: $screenMobile) {
+			width: 80px;
 		}
 	}
-
 	h1{
-		font-size: 4.2em;
-		line-height: 1.15em;
-		sup {
-			font-size: 1.5rem;
-			font-weight: 500;
-			position: relative;
-			top: -10px;
-		}
+		display: inline-block;
+		font-size: 66px;
+		font-weight: 800;
+		letter-spacing: -0.5px;
 
-		@media(max-width: $screenTablet) {
-			font-size: 3.7em;
-		}
 		@media(max-width: $screenMobile) {
-			font-size: 3.7em;
+			font-size: 46px;
 		}
 	}
+}
 
-	p{
-		font-size: 2.25rem;
-		line-height: 1.5em;
-		margin-top: 20px;
+#homeText{
+	display: block;
+	max-width:1200px;
+	font-size: 110px;
+	line-height: 100px;
+	margin-top: 150px;
+	font-weight: 800;
+	max-width: 1000px;
 
-		sup{
-			font-size: 1rem;
-		}
+	@media(max-width: $screenMobile) {
+		font-size: 74px;
+		line-height: 64px;
+		margin-top: 75px;
+	}
 
-		@media(max-width: $screenTablet) {
-			font-size: 2em;
-		}
+	small{
+		font-size: 20px;
+		display: inline-block;
+		max-width: 400px;
+		line-height: 24px;
+		font-weight: 400;
+		vertical-align: top;
+		padding-top: 60px;
+
 		@media(max-width: $screenMobile) {
-			font-size: 1.5em;
+			padding-top: 30px;
 		}
 	}
 }
 
-
-// Marquee
-#homeMarqueeScroll{
-	width: 100%;
-	background-color: var(--bright);
-	margin: 16vh 0 24vh 0;
-	border-top: var(--borderWidth) solid var(--text);
-	border-bottom: var(--borderWidth) solid var(--text);
-	overflow: hidden;
-
-	&.purple{
-		background-color: var(--purple);
-	}
-
-	@media(max-width: $screenTablet) {
-		margin: 12vh 0 16vh 0;
-	}
-	@media(max-width: $screenMobile) {
-		margin: 8vh 0 16vh 0;
-	}
-
-	#homeMarquee{
-		display: flex;
-		gap: 0 6vw;
-		font-size: 1.25em;
-		font-weight: 700;
-		animation: marquee 50s linear 0s infinite alternate none;
-		transform: translate(-60%, 0%);
-
-		@media(max-width: $screenTablet) {
-			font-size: 1em;
-		}
-
-		span{
-			display: block;
-			padding: 30px 0;
-			white-space: pre;
-
-			@media(max-width: $screenTablet) {
-				padding: 20px 0;
-			}
-
-			i{
-				transform: scale(1.25);
-				margin-left: 10px;
-			}
-		}
-	}
-}
-@keyframes marquee {
-    0% {
-        transform: translate(-60%, 0%);
-    }
-    100% {
-        transform: translate(5%, 0%);
-    }
-}
-
-
-
-// House Rules
-#houseRulesWrapper{
-	display: flex;
-	justify-content: center;
-	margin: 10vh 0 18vh 0;
-
-	@media(max-width: $screenTablet) {
-		margin: 8vh 0 16vh 0;
-	}
-	@media(max-width: $screenMobile) {
-		margin: 10vh 0 4vh 0;
-	}
-
-	#houseRules{
-		background-color: var(--white);
-		border: var(--borderWidth) solid var(--text);
-		border-radius: 12px;
-		width: 100%;
-		position: relative;
-		max-width: 1100px;
-		margin: 0 auto;
-
-		// Transforms
-		transform: rotate(4deg);
-		transform-origin: center -40px;
-		animation: sign 2s ease-in-out 0s infinite alternate none;
-
-		@keyframes sign {
-			0% {
-				transform: rotate(-3deg);
-			}
-			100% {
-				transform: rotate(2deg);
-			}
-		}
-
-
-
-		// Pin
-		&:before{
-			content: "";
-			width: 24px;
-			height: 24px;
-			background-color: var(--yellow);
-			border-radius: 50%;
-			position: absolute;
-			left: 50%;
-			margin-left: -12px;
-			top: -56px;
-			border: calc(var(--borderWidth) / 2) solid var(--text);
-		}
-
-		// Hanger
-		&:after{
-			content: "";
-			width: 100px;
-			height: 100px;
-			border-left: var(--borderWidth) solid var(--text);
-			border-top: var(--borderWidth) solid var(--text);
-			position: absolute;
-			transform: rotate(45deg);
-			border-top-left-radius: 20px;
-			top: -54px;
-			left: 50%;
-			margin-left: -50px;
-		}
-
-		h1{
-			font-family: var(--bubble);
-			display: block;
-			margin: 0 auto;
-			text-align: center;
-			padding: 60px 0 0 0;
-			font-size: 4em;
-
-			@media(max-width: $screenTablet) {
-				font-size: 3.5em;
-				padding: 40px 0 0 0;
-			}
-			@media(max-width: $screenMobile) {
-				font-size: 3em;
-			}
-			@media(max-width: $screenTiny) {
-				font-size: 2.5em;
-			}
-		}
-
-		ul{
-			display: flex;
-			list-style-type: none;
-			padding: 0;
-			margin: 0 auto;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 15px;
-			margin: 40px 0 80px 0px;
-
-			@media(max-width: $screenTablet) {
-				margin: 30px 0 50px 0;
-			}
-
-			li{
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				position: relative;
-				font-size: 0.9em;
-				font-family: var(--sans);
-				font-weight: 500;
-				text-align: center;
-				width: 120px;
-				line-height: 1em;
-
-				@media(max-width: $screenTablet) {
-					width: 110px;
-					font-size: 0.85em;
-				}
-
-				.hr-icons{
-					width: 100%;
-					display: block;
-					margin-bottom: 10px;
-					i{
-						width: 100%;
-						font-size: 3.5rem;
-						height: 100px;
-						text-align: center;
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-
-						@media(max-width: $screenTablet) {
-							font-size: 3.25em;
-						}
-
-						&:nth-child(2){
-							position: absolute;
-							top: 0;
-							color: var(--accent);
-							font-size: 6rem;
-
-							@media(max-width: $screenTablet) {
-								font-size: 5.75em;
-							}
-							&.fa-circle{
-								color: var(--background);
-							}
-						}
-					}
-				}
-
-				sup{
-					color: var(--accent);
-					font-size: 0.7em;
-					padding-left: 5px;
-					line-height: 0;
-					position: relative;
-					top: 5px;
-					white-space: pre;
-
-					&:hover{
-						cursor: pointer;
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-
-// Home Table - Potluck
-#tableHeader{
-	display: block;
-	margin: 0 auto 0 auto;
-	text-align: center;
-	font-size: 2em;
-	font-family: var(--sans);
-	font-weight: 700;
-	max-width: 96vw;
-	line-height: 1.1em;
-
-	@media(max-width: $screenTablet) {
-		font-size: 1.8em;
-	}
-	@media(max-width: $screenMobile) {
-		font-size: 1.6em;
-		padding-bottom: 10px;
-	}
-}
-#homeTableScroll{
-	padding: 8vh 0 50px 0;
-	display: block;
-	width: 100%;
+#homeNo{
+	text-wrap: nowrap;
+	margin: 100px 0 0 0;
 	max-width: 100%;
 	overflow: auto;
-	box-sizing: border-box;
-	font-family: var(--sans);
-
-	@media(max-width: $screenTablet) {
-		padding: 8vh 0 40px 0;
-	}
-	@media(max-width: $screenMobile) {
-		padding: 8vh 0 30px 0;
-	}
-
-	#homeTable{
-		display: block;
-		border-radius: 50px;
-		width: 3000px;
-		height: 400px;
-		margin: 0 8vw;
-		border: var(--borderWidth) solid var(--text);
-		display: flex;
-		gap: 0 80px;
-		box-sizing: border-box;
-		padding: 50px;
-
-		background-color: #f5d9b2;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='36' viewBox='0 0 100 18'%3E%3Cpath fill='%23000000' fill-opacity='0.075' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
-	
-		@media(max-width: $screenTablet) {
-			padding: 42px;
-			height: 370px;
-			gap: 0 60px;
-		}
-		@media(max-width: $screenMobile) {
-			padding: 35px;
-			height: 340px;
-			gap: 0 50px;
-		}
-	}
+	opacity: 0.24;
 }
 
-// Table Plates and other elements
-.table-food{
+
+#homeP1{
+	margin-top: 100px;
+}
+
+#projectHeader{
+	margin-top: 100px;
+	font-size: 70px;
+}
+
+#projectLinks{
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border: var(--borderWidth) solid var(--text);
-	background-color: var(--white);
-	height: 100%;
-	box-sizing: border-box;
-	font-family: var(--serif);
-	position: relative;
-	text-align: center;
-	transition: var(--transition);
-	color: var(--text);
+	flex-wrap: wrap;
+	margin-top: 30px;
+	gap: 10px 50px;
+	margin-bottom: 100px;
 
-	b{
-		font-size: 2em;
-		font-weight: 1000;
-
-		@media(max-width: $screenTablet) {
-			font-size: 1.75em;
-		}
-		@media(max-width: $screenMobile) {
-			font-family: var(--sans);
-			font-size: 1.5em;
-			font-weight: 700;
-		}
-	}
-	span{
-		display: block;
-		margin-top: 10px;
-		font-weight: 600;
-		line-height: 1.6em;
-		font-family: var(--sans);
-	}
-}
-a.table-food{
-	&:hover,
-	&:focus{
-		b{
-			text-decoration: underline;
-			cursor: pointer;
-		}
+	a{
+		font-weight: 800;
+		font-size: 42px;
 	}
 }
 
-#tableMac{
-	padding: 20px;
-	width: 250px;
-	border-radius: 20px;
-	background-color: var(--yellow);
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16'%3E%3Cg fill='%23000000' fill-opacity='0.075'%3E%3Cpath fill-rule='evenodd' d='M0 .04C2.6.22 4.99 1.1 7 2.5A13.94 13.94 0 0 1 15 0h4c.34 0 .67.01 1 .04v2A12 12 0 0 0 7.17 12h5.12A7 7 0 0 1 20 7.07V14a5 5 0 0 0-3-4.58A5 5 0 0 0 14 14H0V7.07c.86.12 1.67.4 2.4.81.75-1.52 1.76-2.9 2.98-4.05C3.79 2.83 1.96 2.2 0 2.04v-2z'/%3E%3C/g%3E%3C/svg%3E");
-
-	&:hover{
-		transform: scale(1.04) rotate(-3deg);
-	}
-}
-#tableKiwi{
-	padding: 20px;
-	width: 300px;
-	border-radius: 50%;
-	background-color: #72df72;
-	background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='57' viewBox='0 0 34 44'%3E%3Cg fill='%23000000' fill-opacity='0.075'%3E%3Cpath fill-rule='evenodd' d='M1 6.2C.72 5.55.38 4.94 0 4.36v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 22 12.04 12.04 0 0 0 1 28.2c-.28-.65-.62-1.26-1-1.84v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 44h21.6a12.05 12.05 0 0 0 5.2-4.36V26.36A12.05 12.05 0 0 0 28.8 22a12.05 12.05 0 0 0 5.2-4.36V4.36A12.05 12.05 0 0 0 28.8 0H7.2A12.04 12.04 0 0 0 1 6.2zM17.36 23H12a10 10 0 1 0 0 20h5.36a11.99 11.99 0 0 1 0-20zm1.28-2H24a10 10 0 1 0 0-20h-5.36a11.99 11.99 0 0 1 0 20zM12 1a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2zM12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 43a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm0-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 37a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2z'/%3E%3C/g%3E%3C/svg%3E");
-
-	@media(max-width: $screenTablet) {
-		width: 280px;
-	}
-	@media(max-width: $screenMobile) {
-		width: 260px;
-	}
-
-
-	#tableKiwiSpoon{
-		position: absolute;
-		bottom: -15px;
-		left: 15px;
-		font-size: 6.75em;
-		transform: rotate(20deg);
-		transition: var(--transition);
-
-		@media(max-width: $screenTablet) {
-			font-size: 6em;
-		}
-	}
-	&:hover #tableKiwiSpoon{
-		left: 40px;
-		bottom: -20px;
-		transform: rotate(10deg);
-	}
-
-}
-#tablePasta{
-	padding: 20px;
-	width: 340px;
-	border-radius: 100px;
-	background-color: #f39191;
-	background-image: url("data:image/svg+xml, %3Csvg width='48' height='32' viewBox='0 0 48 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F4D49B' fill-opacity='0.3'%3E%3Cpath d='M27 32c0-3.314 2.686-6 6-6 5.523 0 10-4.477 10-10S38.523 6 33 6c-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.21 0-4 1.79-4 4h-2zm-6 0c0-3.314-2.686-6-6-6-5.523 0-10-4.477-10-10S9.477 6 15 6c3.314 0 6-2.686 6-6h-2c0 2.21-1.79 4-4 4C8.373 4 3 9.373 3 16s5.373 12 12 12c2.21 0 4 1.79 4 4h2z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
-	&:after,
-	&:before{
-		content: "";
-		background-color: var(--text);
-		height: 100px;
-		width: 30px;
-		position: absolute;
-		left: -30px;
-		top: 50%;
-		margin-top: -50px;
-		border-top-left-radius: 15px;
-		border-bottom-left-radius: 15px;
-	}
-	&:after{
-		left: unset;
-		right: -30px;
-		border-radius: 0;
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-	}
-
-	&:hover{
-		transform: translateY(10px);
-	}
-}
-#tableMore{
-	padding: 20px;
-	width: 360px;
-	border-radius: 150px;
-	background-color: #FFFFFF;
-}
-.table-flex-grow{
-	flex-grow: 3;
-}
 
 
 
-#disclaimers{
-	color: var(--text);
-	font-family: var(--serif);
-	font-size: 1.35em;
-	line-height: 1.5em;
-	list-style-type: none;
-	margin: 0vh auto 10vh auto;
-	max-width: 800px;
-	position: relative;
-	top: -5vh;
-
-	@media(max-width: $screenTablet) {
-		font-size: 1.5em;
-	}
-	@media(max-width: $screenMobile) {
-		font-size: 1.25em;
-		margin: 0vh auto 5vh auto;
-	}
-
-	li{
-		margin: 0 auto;
-		padding: 0 0 50px 0;
-		max-width: 800px;
-
-		@media(max-width: $screenTablet) {
-			padding: 0 0 40px 0;
-		}
-		@media(max-width: $screenMobile) {
-			padding: 0 0 30px 0;
-		}
-
-		b{
-			font-family: var(--sans);
-			color: var(--accent);
-		}
-		p{
-			font-size: 0.8em;
-			line-height: 1.5em;
-			box-sizing: border-box;
-			padding: 10px 0 0 100px;
-			max-width: unset;
-
-			@media(max-width: $screenTablet) {
-				padding: 10px 0 0 64px;
-			}
-			@media(max-width: $screenMobile) {
-				padding: 10px 0 0 26px;
-			}
-		}
-	}
-}

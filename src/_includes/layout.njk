@@ -5,23 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Hotdi.sh</title>
 		<meta name="description" content="Making the internet a little nicer by building practical websites & apps without all the clutter and nonsense." />
-<meta name="theme-color" content="#C1BFF8">
+		<meta name="theme-color" content="#FFFFFF">
 
 
         {% include "favicon.njk" %}
         <link rel="stylesheet" href="{{ '/css/main.css' | url }}"/>
-		<script src="https://kit.fontawesome.com/3363695081.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
-        {% include "components/header.njk" %}
-
         {{ content | safe }}
 
-        {% include "components/footer.njk" %}
-
         <script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
-
 
     </body>
 </html>
